@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #F4F6F8; /* Light Government background gray */
+    color: #1A1A1A; /* Solid charcoal text */
+    font-family: 'Inter', 'Noto Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Scrollbar Styles suited for clean enterprise portals */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EAEFF3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BDC8D3;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9AAAB7;
+}
+
+/* Enterprise Layout Panels */
+.gov-header {
+  background-color: #0B1F3A; /* Dark Navy Primary */
+  border-bottom: 2px solid #C79A2B; /* Official Gold Accent Trim */
+}
+
+.gov-sidebar {
+  background-color: #0B1F3A;
+  border-right: 1px solid #D9E1E8;
+}
+
+.gov-card {
+  background-color: #FFFFFF;
+  border: 1px solid #D9E1E8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.gov-panel-header {
+  background-color: #EBF1F6;
+  border-bottom: 1px solid #D9E1E8;
+  color: #0B1F3A;
+}
+
+/* Typing Indicators */
+@keyframes bounce-custom {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.typing-dot {
+  animation: bounce-custom 1s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Official Government Data Tables styling */
+.gov-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.gov-table th {
+  background-color: #1E4E8C; /* Operations Blue */
+  border: 1px solid #D9E1E8;
+  padding: 10px 14px;
+  font-weight: 600;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.gov-table td {
+  border: 1px solid #D9E1E8;
+  padding: 10px 14px;
+  color: #2D3748;
+  background-color: #FFFFFF;
+}
+
+.gov-table tr:nth-child(even) td {
+  background-color: #F8FAFC;
+}
+
+.gov-table tr:hover td {
+  background-color: #EDF4FC;
+}
+
+/* Standard markdown tables in findings panels */
+.chat-markdown-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.825rem;
+}
+
+.chat-markdown-table th {
+  background-color: #1E4E8C;
+  border: 1px solid #D9E1E8;
+  padding: 8px 12px;
+  font-weight: 600;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.chat-markdown-table td {
+  border: 1px solid #D9E1E8;
+  padding: 8px 12px;
+  color: #1A1A1A;
+  background-color: #FFFFFF;
+}
+
+.chat-markdown-table tr:nth-child(even) td {
+  background-color: #F8FAFC;
+}
+
+.chat-markdown-table tr:hover td {
+  background-color: #EDF4FC;
+}

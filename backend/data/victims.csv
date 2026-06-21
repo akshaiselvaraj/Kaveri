@@ -1,0 +1,301 @@
+victim_id,name,age,gender,occupation
+1,Ravi Kulkarni,35,Male,Delivery Executive
+2,Girish Nair,31,Male,Retired
+3,Girish Naik,19,Male,Student
+4,Meena Desai,69,Female,Doctor
+5,Srinivas Joshi,85,Male,Teacher
+6,Manjunath Reddy,24,Male,Doctor
+7,Uma Hiremath,57,Female,Shop Owner
+8,Manjunath Reddy,75,Male,Student
+9,Mahesh Gowda,38,Male,Accountant
+10,Basavaraj Menezes,77,Male,Homemaker
+11,Ravi Nair,56,Male,Retired
+12,Priya Sastry,23,Female,Sales Executive
+13,Saritha Pai,40,Female,Software Engineer
+14,Meena Raju,61,Female,Doctor
+15,Prashanth Desai,74,Male,Teacher
+16,Anitha Reddy,81,Female,Unemployed
+17,Vikram Kumar,41,Male,Delivery Executive
+18,Deepak Bhat,12,Male,Farmer
+19,Ganesh Sharma,32,Male,Farmer
+20,Priya Shenoy,22,Female,Bank Clerk
+21,Vijay Swamy,76,Male,Homemaker
+22,Naveen Shenoy,59,Male,Lawyer
+23,Pushpa Kumar,19,Female,Delivery Executive
+24,Anil Jadhav,19,Male,Software Engineer
+25,Srinivas Swamy,45,Male,Student
+26,Preethi Sen,67,Female,Delivery Executive
+27,Rupa Desai,62,Female,Teacher
+28,Prashanth Kamat,11,Male,Teacher
+29,Saritha Pai,37,Female,Software Engineer
+30,Geetha Shenoy,53,Female,Doctor
+31,Kiran Kulkarni,58,Male,Police Officer
+32,Naveen Bhat,53,Male,Delivery Executive
+33,Kavitha Shetty,81,Female,Retired
+34,Mamatha Sen,42,Female,Homemaker
+35,Sanjay Kamat,38,Male,Shop Owner
+36,Girish Pai,48,Male,Unemployed
+37,Shivakumar Prasad,53,Male,Police Officer
+38,Santosh Joshi,18,Male,Mechanic
+39,Amit Menezes,66,Male,Business Owner
+40,Rekha Kumar,42,Female,Driver
+41,Divya Murthy,55,Female,Contractor
+42,Basavaraj Menezes,74,Male,Lawyer
+43,Raghu Naik,12,Male,Mechanic
+44,Naveen Shenoy,31,Male,Contractor
+45,Praveen Prasad,47,Male,Security Guard
+46,Asha Kamat,47,Female,Bank Clerk
+47,Girish Desai,37,Male,Software Engineer
+48,Shivakumar Jadhav,57,Male,Student
+49,Rajesh Prasad,33,Male,Software Engineer
+50,Asha Pinto,45,Female,Accountant
+51,Shivakumar Hiremath,76,Male,Police Officer
+52,Meena Gowda,27,Female,Retired
+53,Radha Jadhav,60,Female,Software Engineer
+54,Roopa Prasad,15,Female,Farmer
+55,Raghu Murthy,78,Male,Security Guard
+56,Lakshmi Prasad,18,Female,Bank Clerk
+57,Srinivas Pinto,60,Male,Contractor
+58,Mamatha Raju,12,Female,Homemaker
+59,Radha Shenoy,24,Female,Shop Owner
+60,Sunitha Kamat,81,Female,Accountant
+61,Asha Raju,10,Female,Bank Clerk
+62,Ravi Reddy,67,Male,Unemployed
+63,Shivakumar Menezes,72,Male,Student
+64,Gowri Jadhav,40,Female,Unemployed
+65,Mohan Sastry,18,Male,Police Officer
+66,Praveen Hegde,32,Male,Security Guard
+67,Ganesh Sastry,68,Male,Shop Owner
+68,Shivakumar Sastry,23,Male,Shop Owner
+69,Rajesh Hiremath,75,Male,Bank Clerk
+70,Divya Kamat,24,Female,Sales Executive
+71,Divya Prasad,16,Female,Lawyer
+72,Sunitha Hiremath,10,Female,Police Officer
+73,Sandesh Murthy,21,Male,Retired
+74,Kavitha Murthy,37,Female,Doctor
+75,Anil Shenoy,71,Male,Contractor
+76,Shivakumar Pai,66,Male,Software Engineer
+77,Jyothi Jadhav,74,Female,Doctor
+78,Jyothi Sen,21,Female,Sales Executive
+79,Naveen Menezes,59,Male,Security Guard
+80,Priya Prasad,80,Female,Delivery Executive
+81,Divya Menezes,27,Female,Sales Executive
+82,Meena Shetty,34,Female,Unemployed
+83,Basavaraj Murthy,17,Male,Retired
+84,Srinivas Kumar,55,Male,Farmer
+85,Amit Ali,82,Male,Retired
+86,Roopa Pai,29,Female,Software Engineer
+87,Priya Hegde,11,Female,Business Owner
+88,Vijay Gowda,34,Male,Shop Owner
+89,Manjunath Hiremath,58,Male,Shop Owner
+90,Santosh Raju,15,Male,Delivery Executive
+91,Saritha Joshi,55,Female,Farmer
+92,Mohan Bhandary,53,Male,Software Engineer
+93,Mahesh Hiremath,46,Male,Lawyer
+94,Meena Desai,85,Female,Security Guard
+95,Manjunath Shetty,23,Male,Lawyer
+96,Kavitha Patil,70,Female,Retired
+97,Harish Naik,39,Male,Unemployed
+98,Pushpa Ali,61,Female,Lawyer
+99,Praveen Hiremath,55,Male,Teacher
+100,Rekha Gowda,53,Female,Lawyer
+101,Saraswathi Kulkarni,12,Female,Teacher
+102,Neela Prasad,42,Female,Homemaker
+103,Kavitha Kamat,38,Female,Software Engineer
+104,Preethi Shetty,76,Female,Accountant
+105,Girish Kumar,77,Male,Accountant
+106,Suresh Acharya,70,Male,Shop Owner
+107,Gowri Sastry,69,Female,Contractor
+108,Santosh Pai,21,Male,Teacher
+109,Vijay Sastry,60,Male,Contractor
+110,Gowri Shetty,21,Female,Farmer
+111,Vikram Naik,62,Male,Lawyer
+112,Savitha Kumar,24,Female,Contractor
+113,Gowri Swamy,62,Female,Doctor
+114,Raghu Shetty,18,Male,Lawyer
+115,Vijay Jadhav,47,Male,Teacher
+116,Rajesh Kamat,39,Male,Accountant
+117,Uma Joshi,63,Female,Security Guard
+118,Divya Gowda,43,Female,Delivery Executive
+119,Radha Nair,12,Female,Homemaker
+120,Lakshmi Ali,34,Female,Mechanic
+121,Kavitha Pinto,67,Female,Driver
+122,Rajesh Kumar,79,Male,Software Engineer
+123,Latha Acharya,36,Female,Software Engineer
+124,Raghu Shetty,39,Male,Accountant
+125,Neela Shetty,64,Female,Unemployed
+126,Savitha Patil,65,Female,Software Engineer
+127,Santosh Rao,59,Male,Business Owner
+128,Latha Hiremath,74,Female,Mechanic
+129,Karthik Joshi,59,Male,Shop Owner
+130,Harish Reddy,61,Male,Shop Owner
+131,Saraswathi Raju,81,Female,Sales Executive
+132,Sanjay Murthy,32,Male,Police Officer
+133,Santosh Sharma,76,Male,Security Guard
+134,Saraswathi Shetty,42,Female,Security Guard
+135,Harish Rao,79,Male,Sales Executive
+136,Uma Jadhav,41,Female,Security Guard
+137,Basavaraj Murthy,59,Male,Security Guard
+138,Uma Acharya,33,Female,Homemaker
+139,Vidya Shetty,31,Female,Software Engineer
+140,Suresh Raju,48,Male,Retired
+141,Kiran Jadhav,78,Male,Contractor
+142,Kavitha Sen,22,Female,Shop Owner
+143,Prashanth Prasad,83,Male,Homemaker
+144,Vijay Gowda,49,Male,Student
+145,Basavaraj Bhat,46,Male,Unemployed
+146,Asha Gowda,40,Female,Mechanic
+147,Anil Rao,65,Male,Bank Clerk
+148,Saritha Ali,39,Female,Accountant
+149,Lakshmi Shetty,49,Female,Retired
+150,Divya Pinto,38,Female,Unemployed
+151,Jyothi Shenoy,22,Female,Software Engineer
+152,Vinay Rao,65,Male,Unemployed
+153,Kiran Shenoy,59,Male,Doctor
+154,Rekha Bhat,16,Female,Police Officer
+155,Rupa Pinto,14,Female,Lawyer
+156,Saraswathi Murthy,15,Female,Contractor
+157,Vinay Nair,69,Male,Bank Clerk
+158,Sudha Kulkarni,63,Female,Homemaker
+159,Uma Bhandary,45,Female,Police Officer
+160,Sanjay Nair,48,Male,Software Engineer
+161,Sudha Sharma,79,Female,Delivery Executive
+162,Divya Hegde,29,Female,Contractor
+163,Poornima Kamat,32,Female,Mechanic
+164,Basavaraj Desai,27,Male,Retired
+165,Saraswathi Murthy,85,Female,Student
+166,Anitha Sastry,13,Female,Mechanic
+167,Neela Kamat,49,Female,Delivery Executive
+168,Girish Acharya,23,Male,Driver
+169,Geetha Pai,77,Female,Student
+170,Naveen Sharma,56,Male,Student
+171,Mamatha Gowda,78,Female,Delivery Executive
+172,Uma Hegde,75,Female,Unemployed
+173,Radha Shetty,40,Female,Homemaker
+174,Poornima Murthy,46,Female,Driver
+175,Ananth Shenoy,80,Male,Police Officer
+176,Vikram Rao,35,Male,Business Owner
+177,Santosh Kamat,82,Male,Business Owner
+178,Saraswathi Jadhav,60,Female,Unemployed
+179,Sunitha Acharya,62,Female,Delivery Executive
+180,Sunitha Jadhav,81,Female,Business Owner
+181,Naveen Raju,63,Male,Police Officer
+182,Nagaraj Jadhav,39,Male,Lawyer
+183,Lakshmi Menezes,47,Female,Sales Executive
+184,Sunitha Naik,32,Female,Accountant
+185,Anitha Bhat,38,Female,Lawyer
+186,Rekha Bhandary,58,Female,Mechanic
+187,Ananth Bhat,17,Male,Retired
+188,Sudha Nair,71,Female,Bank Clerk
+189,Shreya Nair,37,Female,Doctor
+190,Santosh Shetty,54,Male,Contractor
+191,Ramesh Acharya,69,Male,Unemployed
+192,Roopa Hegde,39,Female,Security Guard
+193,Naveen Swamy,28,Male,Farmer
+194,Rajesh Shenoy,12,Male,Contractor
+195,Rajesh Sharma,61,Male,Security Guard
+196,Srinivas Bhat,25,Male,Contractor
+197,Shreya Bhat,28,Female,Lawyer
+198,Prashanth Pai,60,Male,Student
+199,Uma Sen,25,Female,Contractor
+200,Poornima Sastry,80,Female,Homemaker
+201,Neela Gowda,29,Female,Farmer
+202,Ramesh Nair,18,Male,Security Guard
+203,Rajesh Murthy,62,Male,Driver
+204,Saritha Reddy,54,Female,Shop Owner
+205,Basavaraj Bhat,78,Male,Unemployed
+206,Karthik Bhat,35,Male,Homemaker
+207,Sandesh Reddy,65,Male,Bank Clerk
+208,Anil Sastry,56,Male,Contractor
+209,Praveen Desai,62,Male,Mechanic
+210,Lakshmi Reddy,17,Female,Unemployed
+211,Poornima Pai,83,Female,Doctor
+212,Ananth Raju,79,Male,Unemployed
+213,Amit Bhat,76,Male,Bank Clerk
+214,Vikram Bhat,38,Male,Farmer
+215,Santosh Shenoy,76,Male,Delivery Executive
+216,Mohan Raju,27,Male,Teacher
+217,Praveen Pai,59,Male,Driver
+218,Ganesh Hegde,79,Male,Delivery Executive
+219,Shivakumar Kulkarni,25,Male,Retired
+220,Ramesh Prasad,20,Male,Mechanic
+221,Basavaraj Raju,12,Male,Security Guard
+222,Ravi Patil,77,Male,Delivery Executive
+223,Santosh Swamy,50,Male,Bank Clerk
+224,Saraswathi Sen,78,Female,Bank Clerk
+225,Anitha Jadhav,53,Female,Bank Clerk
+226,Ananth Hegde,62,Male,Software Engineer
+227,Saraswathi Jadhav,39,Female,Homemaker
+228,Saraswathi Sastry,41,Female,Contractor
+229,Karthik Menezes,52,Male,Retired
+230,Geetha Raju,83,Female,Homemaker
+231,Uma Prasad,32,Female,Farmer
+232,Praveen Pai,76,Male,Shop Owner
+233,Geetha Shetty,71,Female,Accountant
+234,Harish Sen,27,Male,Delivery Executive
+235,Preethi Pinto,31,Female,Business Owner
+236,Mohan Sen,48,Male,Accountant
+237,Savitha Pai,84,Female,Bank Clerk
+238,Sandesh Prasad,50,Male,Contractor
+239,Ravi Kamat,60,Male,Shop Owner
+240,Anil Kamat,40,Male,Contractor
+241,Ramesh Patil,46,Male,Retired
+242,Priya Joshi,49,Female,Homemaker
+243,Basavaraj Naik,57,Male,Doctor
+244,Jyothi Prasad,31,Female,Farmer
+245,Saritha Hegde,67,Female,Bank Clerk
+246,Rajesh Raju,62,Male,Retired
+247,Bhagya Nair,18,Female,Lawyer
+248,Rekha Kumar,69,Female,Shop Owner
+249,Srinivas Pinto,27,Male,Student
+250,Kiran Hegde,31,Male,Homemaker
+251,Saritha Joshi,37,Female,Doctor
+252,Uma Ali,19,Female,Sales Executive
+253,Kavitha Hiremath,47,Female,Unemployed
+254,Kavitha Bhat,20,Female,Driver
+255,Shreya Hiremath,76,Female,Homemaker
+256,Divya Murthy,46,Female,Accountant
+257,Preethi Murthy,37,Female,Accountant
+258,Priya Pinto,67,Female,Contractor
+259,Mahesh Kumar,45,Male,Student
+260,Uma Acharya,37,Female,Teacher
+261,Srinivas Kumar,50,Male,Security Guard
+262,Rupa Ali,65,Female,Doctor
+263,Geetha Hegde,50,Female,Delivery Executive
+264,Vinay Pai,63,Male,Farmer
+265,Latha Jadhav,30,Female,Business Owner
+266,Geetha Swamy,84,Female,Bank Clerk
+267,Deepa Joshi,36,Female,Homemaker
+268,Sandesh Swamy,13,Male,Retired
+269,Basavaraj Acharya,82,Male,Sales Executive
+270,Anitha Nair,73,Female,Business Owner
+271,Anitha Bhat,27,Female,Doctor
+272,Naveen Murthy,54,Male,Teacher
+273,Naveen Swamy,57,Male,Unemployed
+274,Ananth Jadhav,63,Male,Homemaker
+275,Priya Desai,82,Female,Farmer
+276,Harish Ali,41,Male,Business Owner
+277,Sudha Raju,79,Female,Accountant
+278,Kavitha Shetty,20,Female,Retired
+279,Poornima Kulkarni,85,Female,Driver
+280,Nagaraj Patil,29,Male,Business Owner
+281,Vidya Naik,56,Female,Homemaker
+282,Geetha Hiremath,44,Female,Accountant
+283,Manjunath Menezes,31,Male,Teacher
+284,Girish Prasad,40,Male,Security Guard
+285,Manjunath Prasad,47,Male,Business Owner
+286,Gowri Shenoy,76,Female,Contractor
+287,Shreya Kumar,25,Female,Security Guard
+288,Harish Swamy,63,Male,Sales Executive
+289,Raghu Jadhav,24,Male,Teacher
+290,Priya Menezes,82,Female,Homemaker
+291,Basavaraj Desai,41,Male,Retired
+292,Pushpa Menezes,54,Female,Unemployed
+293,Mamatha Naik,66,Female,Police Officer
+294,Sanjay Murthy,12,Male,Driver
+295,Mohan Nair,41,Male,Police Officer
+296,Ananth Sharma,84,Male,Farmer
+297,Amit Sharma,69,Male,Police Officer
+298,Neela Kulkarni,12,Female,Driver
+299,Nagaraj Sharma,13,Male,Student
+300,Shreya Acharya,82,Female,Sales Executive

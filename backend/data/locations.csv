@@ -1,0 +1,101 @@
+location_id,district,latitude,longitude
+1,Kalaburagi,17.3296,76.8419
+2,Kalaburagi,17.284,76.8359
+3,Bengaluru West,12.9513,77.5512
+4,Bengaluru East,13.0044,77.6252
+5,Kalaburagi,17.3273,76.8418
+6,Bengaluru North,13.0407,77.6096
+7,Bengaluru East,12.985,77.6432
+8,Bengaluru East,12.964,77.5897
+9,Bengaluru South,12.8996,77.5745
+10,Hubballi,15.3291,75.1718
+11,Mangaluru,12.9393,74.87
+12,Kalaburagi,17.3133,76.7993
+13,Mysuru,12.317,76.6072
+14,Bengaluru West,13.0076,77.512
+15,Davanagere,14.5017,75.9299
+16,Bengaluru East,12.9895,77.5616
+17,Bengaluru West,13.0005,77.5719
+18,Mysuru,12.2516,76.6204
+19,Hubballi,15.4133,75.1114
+20,Bengaluru South,12.9121,77.5516
+21,Bengaluru South,12.913,77.6383
+22,Kalaburagi,17.3638,76.8089
+23,Mangaluru,12.9507,74.8835
+24,Davanagere,14.4381,75.882
+25,Bengaluru West,12.9959,77.5342
+26,Bengaluru North,13.0473,77.6445
+27,Shivamogga,13.9227,75.5771
+28,Kalaburagi,17.3284,76.8455
+29,Hubballi,15.3183,75.0982
+30,Davanagere,14.4889,75.9447
+31,Bengaluru North,12.9954,77.6167
+32,Bengaluru East,12.9933,77.6047
+33,Bengaluru East,12.929,77.5515
+34,Davanagere,14.4185,75.8996
+35,Hubballi,15.39,75.1215
+36,Kalaburagi,17.3126,76.8051
+37,Bengaluru North,12.9939,77.5911
+38,Bengaluru North,13.083,77.6216
+39,Hubballi,15.3217,75.1299
+40,Bengaluru South,12.9511,77.5659
+41,Shivamogga,13.9506,75.5255
+42,Hubballi,15.3305,75.1439
+43,Bengaluru East,12.9698,77.6121
+44,Bengaluru North,13.0221,77.5931
+45,Mangaluru,12.9028,74.8319
+46,Bengaluru East,12.9684,77.5879
+47,Davanagere,14.464,75.9363
+48,Davanagere,14.4518,75.8964
+49,Belagavi,15.8339,74.5331
+50,Kalaburagi,17.281,76.7951
+51,Mysuru,12.3063,76.6421
+52,Mysuru,12.2526,76.6101
+53,Bengaluru East,12.9259,77.591
+54,Bengaluru South,12.88,77.5569
+55,Mysuru,12.2788,76.6874
+56,Davanagere,14.4653,75.9293
+57,Bengaluru East,13.0098,77.6041
+58,Mangaluru,12.9185,74.8697
+59,Bengaluru West,12.9573,77.5533
+60,Shivamogga,13.9272,75.5909
+61,Hubballi,15.3582,75.0894
+62,Hubballi,15.3354,75.0947
+63,Kalaburagi,17.346,76.7848
+64,Shivamogga,13.9081,75.5251
+65,Mangaluru,12.8653,74.8674
+66,Belagavi,15.8037,74.5142
+67,Mysuru,12.3392,76.641
+68,Mangaluru,12.9548,74.8995
+69,Davanagere,14.4507,75.9654
+70,Shivamogga,13.8942,75.5261
+71,Shivamogga,13.9398,75.6096
+72,Shivamogga,13.8815,75.5303
+73,Bengaluru North,13.0589,77.6468
+74,Bengaluru East,12.9502,77.5688
+75,Bengaluru West,12.9249,77.5762
+76,Bengaluru East,13.015,77.5541
+77,Mangaluru,12.9483,74.8632
+78,Kalaburagi,17.3239,76.8172
+79,Bengaluru South,12.9165,77.6196
+80,Bengaluru West,13.0185,77.5009
+81,Mangaluru,12.9443,74.8491
+82,Belagavi,15.8379,74.451
+83,Hubballi,15.3676,75.1126
+84,Hubballi,15.3706,75.1737
+85,Bengaluru East,12.9395,77.5759
+86,Bengaluru North,13.0807,77.6398
+87,Davanagere,14.4778,75.892
+88,Bengaluru South,12.9291,77.5825
+89,Bengaluru West,13.0196,77.5411
+90,Shivamogga,13.9147,75.599
+91,Belagavi,15.8802,74.4867
+92,Bengaluru East,12.9682,77.5845
+93,Bengaluru West,12.96,77.5482
+94,Mangaluru,12.8929,74.8365
+95,Kalaburagi,17.2873,76.834
+96,Belagavi,15.8508,74.5308
+97,Mysuru,12.2763,76.6009
+98,Davanagere,14.4985,75.9542
+99,Belagavi,15.8161,74.5216
+100,Mangaluru,12.9446,74.8494
