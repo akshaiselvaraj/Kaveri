@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Shield, FileText, Activity, AlertTriangle, Play, Square, Database } from 'lucide-react';
 import type { Message } from '../types';
 
@@ -15,6 +16,7 @@ export const MessageItem: React.FC<MessageItemProps> = ({
   onSpeak,
   activeSpeechId
 }) => {
+  const { t } = useTranslation();
   const isModel = message.role === 'model';
   const isSpeaking = activeSpeechId === message.id;
 
@@ -104,7 +106,7 @@ export const MessageItem: React.FC<MessageItemProps> = ({
                               onClick={() => onEntityClick('accused', trimmedCell)}
                               className="px-2 py-0.5 rounded bg-amber-50 border border-amber-200 text-amber-800 hover:bg-amber-600 hover:text-white font-mono text-[11px] cursor-pointer"
                             >
-                              Suspect #{trimmedCell}
+                              {t('message.suspect')} #{trimmedCell}
                             </button>
                           </td>
                         );
@@ -117,7 +119,7 @@ export const MessageItem: React.FC<MessageItemProps> = ({
                               onClick={() => onEntityClick('victim', trimmedCell)}
                               className="px-2 py-0.5 rounded bg-emerald-50 border border-emerald-200 text-emerald-800 hover:bg-emerald-600 hover:text-white font-mono text-[11px] cursor-pointer"
                             >
-                              Victim #{trimmedCell}
+                              {t('message.victim')} #{trimmedCell}
                             </button>
                           </td>
                         );
@@ -246,8 +248,8 @@ export const MessageItem: React.FC<MessageItemProps> = ({
       <div className="flex justify-end px-6 py-2 animate-in fade-in duration-200">
         <div className="max-w-2xl bg-[#EBF1F6] border border-[#1E4E8C]/20 rounded-lg p-4 shadow-sm text-right select-text">
           <div className="flex justify-between items-center gap-10 text-[9px] font-bold text-[#1E4E8C] uppercase tracking-wider mb-1">
-            <span className="font-mono">Log ID: #USR-{message.id.slice(-4)}</span>
-            <span>Investigator Query</span>
+            <span className="font-mono">{t('message.log_id')}{message.id.slice(-4)}</span>
+            <span>{t('message.user_query')}</span>
           </div>
           <p className="text-xs font-mono font-semibold text-[#0B1F3A] leading-relaxed text-left">
             &gt; {message.content}
@@ -265,7 +267,7 @@ export const MessageItem: React.FC<MessageItemProps> = ({
         <div className="bg-[#0B1F3A] px-4 py-2.5 border-b border-[#C79A2B] flex justify-between items-center text-white">
           <div className="flex items-center gap-2">
             <Shield className="w-4 h-4 text-[#C79A2B]" />
-            <span className="text-[10px] font-bold uppercase tracking-wider">Crime Intelligence Findings</span>
+            <span className="text-[10px] font-bold uppercase tracking-wider">{t('message.findings')}</span>
           </div>
           <div className="flex items-center gap-2">
             <button
@@ -280,12 +282,12 @@ export const MessageItem: React.FC<MessageItemProps> = ({
               {isSpeaking ? (
                 <>
                   <Square className="w-2.5 h-2.5 text-white fill-white shrink-0" />
-                  Mute
+                  {t('message.mute')}
                 </>
               ) : (
                 <>
                   <Play className="w-2.5 h-2.5 text-[#C79A2B] fill-[#C79A2B] shrink-0" />
-                  Speak
+                  {t('message.speak')}
                 </>
               )}
             </button>
@@ -298,7 +300,7 @@ export const MessageItem: React.FC<MessageItemProps> = ({
           {sections && sections.summary && (
             <div className="bg-[#F4F6F8]/30 border border-[#D9E1E8] rounded p-3">
               <h4 className="text-[9px] font-bold text-[#0B1F3A] uppercase tracking-wider mb-1.5 pb-0.5 border-b border-[#D9E1E8]/70 flex items-center gap-1">
-                <FileText className="w-3 h-3 text-[#1E4E8C]" /> Summary
+                <FileText className="w-3 h-3 text-[#1E4E8C]" /> {t('message.summary')}
               </h4>
               <div className="text-xs text-slate-700 leading-relaxed">
                 {renderFormattedContent(sections.summary)}
@@ -310,7 +312,7 @@ export const MessageItem: React.FC<MessageItemProps> = ({
           {sections && sections.evidence && (
             <div className="bg-[#F4F6F8]/30 border border-[#D9E1E8] rounded p-3">
               <h4 className="text-[9px] font-bold text-[#0B1F3A] uppercase tracking-wider mb-1.5 pb-0.5 border-b border-[#D9E1E8]/70 flex items-center gap-1">
-                <Database className="w-3 h-3 text-[#1E4E8C]" /> Evidence
+                <Database className="w-3 h-3 text-[#1E4E8C]" /> {t('message.evidence')}
               </h4>
               <div className="text-xs text-slate-700">
                 {renderFormattedContent(sections.evidence)}
@@ -322,7 +324,7 @@ export const MessageItem: React.FC<MessageItemProps> = ({
           {sections && sections.recommendations && (
             <div className="bg-amber-50/20 border border-amber-200/50 rounded p-3">
               <h4 className="text-[9px] font-bold text-amber-800 uppercase tracking-wider mb-1.5 pb-0.5 border-b border-amber-200/60 flex items-center gap-1">
-                <AlertTriangle className="w-3 h-3 text-amber-700" /> Recommendations
+                <AlertTriangle className="w-3 h-3 text-amber-700" /> {t('message.recommendations')}
               </h4>
               <div className="text-xs text-slate-700 leading-relaxed">
                 {renderFormattedContent(sections.recommendations)}
@@ -333,8 +335,8 @@ export const MessageItem: React.FC<MessageItemProps> = ({
           {/* SQL & Latency indicator */}
           {message.sql && (
             <div className="pt-2 border-t border-[#D9E1E8] flex items-center justify-between text-[9px] text-slate-400 font-mono">
-              <span className="flex items-center gap-1"><Database className="w-3 h-3 text-emerald-600"/> Secure Query executed successfully</span>
-              {message.queryMetadata?.executionTimeMs && <span>Latency: {message.queryMetadata.executionTimeMs}ms</span>}
+              <span className="flex items-center gap-1"><Database className="w-3 h-3 text-emerald-600"/> {t('message.sql_success')}</span>
+              {message.queryMetadata?.executionTimeMs && <span>{t('message.latency')} {message.queryMetadata.executionTimeMs}ms</span>}
             </div>
           )}
         </div>

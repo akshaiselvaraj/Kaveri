@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Filter, Database, Cpu, ChevronRight, Info, BookOpen } from 'lucide-react';
 import type { Message } from '../types';
 
@@ -9,6 +10,7 @@ interface RightPanelProps {
 }
 
 export const RightPanel: React.FC<RightPanelProps> = ({ lastMessage, isOpen, onToggle }) => {
+  const { t } = useTranslation();
   if (!isOpen) {
     return (
       <button
@@ -38,7 +40,7 @@ export const RightPanel: React.FC<RightPanelProps> = ({ lastMessage, isOpen, onT
       <div className="p-4 bg-[#0B1F3A] border-b border-[#C79A2B] flex items-center justify-between text-white">
         <div className="flex items-center gap-2">
           <Info className="w-4.5 h-4.5 text-[#C79A2B]" />
-          <h2 className="text-xs font-bold uppercase tracking-wider">Operational Context</h2>
+          <h2 className="text-xs font-bold uppercase tracking-wider">{t('right_panel.title')}</h2>
         </div>
         <button
           onClick={onToggle}
@@ -54,7 +56,7 @@ export const RightPanel: React.FC<RightPanelProps> = ({ lastMessage, isOpen, onT
         <div className="bg-white border border-[#D9E1E8] rounded p-3.5 shadow-sm">
           <h3 className="text-[10px] font-bold text-[#0B1F3A] uppercase tracking-wider mb-2.5 pb-1 border-b border-[#D9E1E8] flex items-center gap-1.5">
             <Filter className="w-3.5 h-3.5 text-[#1E4E8C]" />
-            Active Filters
+            {t('right_panel.active_filters')}
           </h3>
           {hasFilters ? (
             <div className="space-y-1.5">
@@ -66,7 +68,7 @@ export const RightPanel: React.FC<RightPanelProps> = ({ lastMessage, isOpen, onT
               ))}
             </div>
           ) : (
-            <p className="text-xs text-slate-500 italic">No search filters active.</p>
+            <p className="text-xs text-slate-500 italic">{t('right_panel.no_filters')}</p>
           )}
         </div>
 
@@ -74,11 +76,11 @@ export const RightPanel: React.FC<RightPanelProps> = ({ lastMessage, isOpen, onT
         <div className="bg-white border border-[#D9E1E8] rounded p-3.5 shadow-sm">
           <h3 className="text-[10px] font-bold text-[#0B1F3A] uppercase tracking-wider mb-2.5 pb-1 border-b border-[#D9E1E8] flex items-center gap-1.5">
             <Cpu className="w-3.5 h-3.5 text-[#1E4E8C]" />
-            Query Metrics
+            {t('right_panel.metrics')}
           </h3>
           <div className="space-y-2 text-xs">
             <div className="flex justify-between">
-              <span className="text-slate-500">Pipeline Intent:</span>
+              <span className="text-slate-500">{t('right_panel.intent')}</span>
               <span className={`px-2 py-0.5 rounded text-[9px] font-bold border ${
                 metadata?.intent === 'DATABASE_QUERY' 
                   ? 'bg-blue-50 border-blue-200 text-blue-800' 
@@ -91,14 +93,14 @@ export const RightPanel: React.FC<RightPanelProps> = ({ lastMessage, isOpen, onT
             </div>
             
             <div className="flex justify-between">
-              <span className="text-slate-500">Latency:</span>
+              <span className="text-slate-500">{t('right_panel.latency')}</span>
               <span className="text-[#1A1A1A] font-semibold">
                 {metadata?.executionTimeMs ? `${metadata.executionTimeMs}ms` : '0ms'}
               </span>
             </div>
 
             <div className="flex justify-between">
-              <span className="text-slate-500">Language Dialect:</span>
+              <span className="text-slate-500">{t('right_panel.dialect')}</span>
               <span className="text-[#1A1A1A] font-semibold">
                 {lastMessage?.detectedLang === 'kn' ? 'Kannada' : 'English'}
               </span>
@@ -110,13 +112,13 @@ export const RightPanel: React.FC<RightPanelProps> = ({ lastMessage, isOpen, onT
         <div className="bg-white border border-[#D9E1E8] rounded p-3.5 shadow-sm">
           <h3 className="text-[10px] font-bold text-[#0B1F3A] uppercase tracking-wider mb-2.5 pb-1 border-b border-[#D9E1E8] flex items-center gap-1.5">
             <Database className="w-3.5 h-3.5 text-[#1E4E8C]" />
-            Generated SQL Query
+            {t('right_panel.sql_title')}
           </h3>
           <div className="bg-slate-900 border border-slate-950 rounded p-2.5 overflow-x-auto max-h-56 font-mono text-[10px]">
             {sql ? (
               <pre className="text-emerald-400 whitespace-pre-wrap leading-relaxed select-all cursor-text">{sql}</pre>
             ) : (
-              <p className="text-slate-500 italic font-sans">No SQL executed in this interaction.</p>
+              <p className="text-slate-500 italic font-sans">{t('right_panel.no_sql')}</p>
             )}
           </div>
         </div>
@@ -125,7 +127,7 @@ export const RightPanel: React.FC<RightPanelProps> = ({ lastMessage, isOpen, onT
         <div className="bg-white border border-[#D9E1E8] rounded p-3.5 shadow-sm">
           <h3 className="text-[10px] font-bold text-[#0B1F3A] uppercase tracking-wider mb-2.5 pb-1 border-b border-[#D9E1E8] flex items-center gap-1.5">
             <BookOpen className="w-3.5 h-3.5 text-[#1E4E8C]" />
-            Dossier Links
+            {t('right_panel.dossier')}
           </h3>
           {hasEntities ? (
             <div className="space-y-1.5">
@@ -137,7 +139,7 @@ export const RightPanel: React.FC<RightPanelProps> = ({ lastMessage, isOpen, onT
               ))}
             </div>
           ) : (
-            <p className="text-xs text-slate-500 italic">No suspect or case dossier entities mapped.</p>
+            <p className="text-xs text-slate-500 italic">{t('right_panel.no_dossier')}</p>
           )}
         </div>
       </div>

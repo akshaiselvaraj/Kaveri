@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { 
   Mic, MicOff, Languages, Shield, Loader2, 
   Bell, Activity, AlertTriangle
@@ -13,6 +14,7 @@ import { useSpeechToText } from './hooks/useSpeechToText';
 import { useSpeechSynthesis } from './hooks/useSpeechSynthesis';
 
 export default function App() {
+  const { t, i18n } = useTranslation();
   const [sessionId, setSessionId] = useState<string>('session-' + Date.now());
   const [history, setHistory] = useState<Session[]>([]);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -72,7 +74,7 @@ export default function App() {
       {
         id: 'sys-' + Date.now(),
         role: 'model',
-        content: `Loaded operational session logs ID: **${id}**. Processing secure console logs...`,
+        content: t('system.loaded_session', { id }),
       }
     ]);
   };
@@ -124,7 +126,7 @@ export default function App() {
 
     } catch (err: any) {
       console.error(err);
-      setErrorText(err.message || 'Operational AI pipeline failed to process the request.');
+      setErrorText(err.message || t('system.error'));
     } finally {
       setIsProcessing(false);
     }
@@ -185,8 +187,8 @@ export default function App() {
             </div>
           </div>
           <div className="border-l border-white/20 pl-3.5">
-            <h1 className="font-bold text-sm tracking-wide text-white">KAVERI CRIME INTELLIGENCE PLATFORM</h1>
-            <p className="text-[9px] uppercase tracking-widest text-[#C79A2B] font-bold">Government of Karnataka // Police Intelligence Unit</p>
+            <h1 className="font-bold text-sm tracking-wide text-white">{t('header.title')}</h1>
+            <p className="text-[9px] uppercase tracking-widest text-[#C79A2B] font-bold">{t('header.subtitle')}</p>
           </div>
         </div>
 
@@ -195,12 +197,12 @@ export default function App() {
           {/* Secure Role Badge */}
           <div className="flex items-center gap-2 px-3 py-1 bg-[#1E4E8C] border border-[#D9E1E8]/20 rounded text-xs font-semibold">
             <span className="w-1.5 h-1.5 rounded-full bg-[#2E7D32]" />
-            <span>{selectedRole}</span>
+            <span>{selectedRole === 'Lead Investigator' ? t('header.role') : selectedRole === 'Intelligence Officer' ? t('header.role_io') : t('header.role_dgp')}</span>
           </div>
 
           {/* Secure Dialect Selector */}
           <button
-            onClick={() => setLanguage(l => l === 'en' ? 'kn' : 'en')}
+            onClick={() => { const newLang = language === 'en' ? 'kn' : 'en'; setLanguage(newLang); i18n.changeLanguage(newLang); }}
             className="flex items-center gap-1 px-2.5 py-1 bg-white/10 hover:bg-white/20 border border-white/15 rounded text-xs transition-colors cursor-pointer"
             title="Change translation language"
           >
@@ -222,7 +224,7 @@ export default function App() {
             <div className="w-6 h-6 rounded bg-[#1E4E8C] flex items-center justify-center text-[10px] font-bold text-white uppercase border border-[#C79A2B]/40">
               KA
             </div>
-            <span className="text-xs font-medium text-slate-200 hidden md:inline">Console.Admin</span>
+            <span className="text-xs font-medium text-slate-200 hidden md:inline">{t('header.admin')}</span>
           </button>
         </div>
       </header>
@@ -251,20 +253,20 @@ export default function App() {
                   <Shield className="w-6 h-6 text-[#1E4E8C]" />
                 </div>
                 <div className="space-y-1">
-                  <h2 className="text-base font-bold text-[#0B1F3A] uppercase tracking-wide">Kaveri Crime Intelligence Assistant</h2>
+                  <h2 className="text-base font-bold text-[#0B1F3A] uppercase tracking-wide">{t('main.assistant_title')}</h2>
                   <p className="text-xs text-slate-500 leading-relaxed">
-                    Access state crime registers using secure natural language commands. Mapped suspect files, risk records, and transfer histories update context registers in real time.
+                    {t('main.assistant_desc')}
                   </p>
                 </div>
 
                 {/* Suggestions queries prompts chips */}
                 <div className="grid grid-cols-2 gap-2.5 w-full pt-4">
                   {[
-                    'Show cyber fraud cases in Bengaluru',
-                    'Retrieve FIR 1002',
-                    'Show criminal history of Ravi Kumar',
-                    'List repeat offenders',
-                    'Show pending investigations'
+                    t('main.prompt1'),
+                    t('main.prompt2'),
+                    t('main.prompt3'),
+                    t('main.prompt4'),
+                    t('main.prompt5')
                   ].map((promptText) => (
                     <button
                       key={promptText}
@@ -297,7 +299,7 @@ export default function App() {
                       </div>
                       <div className="flex-1 flex flex-col justify-center">
                         <span className="text-[10px] font-bold text-[#0B1F3A] uppercase tracking-wider flex gap-1">
-                          Compiling State SQL Database Queries
+                          {t('main.compiling')}
                           <span className="flex gap-0.5 ml-1 mt-0.5">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#1E4E8C] typing-dot"></span>
                             <span className="w-1.5 h-1.5 rounded-full bg-[#1E4E8C] typing-dot"></span>
@@ -332,7 +334,7 @@ export default function App() {
               <div className="relative flex items-center shrink-0">
                 <button
                   type="button"
-                  onClick={() => setLanguage(l => l === 'en' ? 'kn' : 'en')}
+                  onClick={() => { const newLang = language === 'en' ? 'kn' : 'en'; setLanguage(newLang); i18n.changeLanguage(newLang); }}
                   className="h-11 px-3.5 rounded border border-[#D9E1E8] bg-white hover:bg-slate-50 text-[#1E4E8C] font-semibold text-xs transition-colors flex items-center gap-1.5 cursor-pointer"
                   title="Toggle translation dialects"
                 >
@@ -347,7 +349,7 @@ export default function App() {
                   type="text"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
-                  placeholder={language === 'en' ? "Execute crime intelligence commands (e.g. show repeat offenders)..." : "ಅಪರಾಧ ದಾಖಲೆಗಳ ಪ್ರಶ್ನೆಯನ್ನು ನಮೂದಿಸಿ..."}
+                  placeholder={t('main.input_placeholder')}
                   disabled={isProcessing}
                   className="w-full h-11 pl-4 pr-12 rounded border border-[#D9E1E8] bg-[#F4F6F8]/60 text-[#1A1A1A] placeholder-slate-400 focus:outline-none focus:border-[#1E4E8C] text-xs font-mono"
                 />
@@ -402,36 +404,36 @@ export default function App() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-xs p-4">
           <div className="w-full max-w-md bg-white border border-[#D9E1E8] rounded-lg overflow-hidden shadow-2xl flex flex-col p-6 animate-in fade-in zoom-in duration-150 space-y-4">
             <h2 className="text-xs font-bold text-[#0B1F3A] uppercase tracking-wide border-b border-[#D9E1E8] pb-3 flex items-center gap-2">
-              <Shield className="w-5 h-5 text-[#C79A2B]" /> secure console settings
+              <Shield className="w-5 h-5 text-[#C79A2B]" /> {t('settings.title')}
             </h2>
 
             <div className="space-y-3">
               <div>
-                <label className="block text-[10px] text-slate-500 uppercase tracking-widest font-bold mb-1.5">Investigator Role Profile</label>
+                <label className="block text-[10px] text-slate-500 uppercase tracking-widest font-bold mb-1.5">{t('settings.role_label')}</label>
                 <select
                   value={selectedRole}
                   onChange={(e) => setSelectedRole(e.target.value)}
                   className="w-full p-2.5 rounded border border-[#D9E1E8] bg-[#F4F6F8]/30 text-xs focus:outline-none"
                 >
-                  <option value="Lead Investigator">Lead Investigator</option>
-                  <option value="Intelligence Officer">Intelligence Officer</option>
-                  <option value="Director General of Police">Director General of Police</option>
+                  <option value="Lead Investigator">{t('header.role')}</option>
+                  <option value="Intelligence Officer">{t('header.role_io')}</option>
+                  <option value="Director General of Police">{t('header.role_dgp')}</option>
                 </select>
               </div>
 
               <div className="pt-2">
-                <span className="block text-[10px] text-slate-500 uppercase tracking-widest font-bold mb-1">Target AI Engine Model</span>
+                <span className="block text-[10px] text-slate-500 uppercase tracking-widest font-bold mb-1">{t('settings.model_label')}</span>
                 <div className="p-3 bg-slate-50 border border-[#D9E1E8] rounded flex justify-between items-center text-xs">
                   <span className="text-[#0B1F3A] font-semibold">Gemini 1.5 Flash</span>
-                  <span className="px-2 py-0.5 bg-green-50 border border-green-200 text-[#2E7D32] font-bold text-[9px] rounded">ACTIVE SECURE</span>
+                  <span className="px-2 py-0.5 bg-green-50 border border-green-200 text-[#2E7D32] font-bold text-[9px] rounded">{t('settings.active_secure')}</span>
                 </div>
               </div>
 
               <div className="pt-2">
-                <span className="block text-[10px] text-slate-500 uppercase tracking-widest font-bold mb-1">Database Provider API</span>
+                <span className="block text-[10px] text-slate-500 uppercase tracking-widest font-bold mb-1">{t('settings.db_label')}</span>
                 <div className="p-3 bg-slate-50 border border-[#D9E1E8] rounded flex justify-between items-center text-xs">
                   <span className="text-[#0B1F3A] font-semibold">SQLite Engine // pgsql fallback</span>
-                  <span className="px-2 py-0.5 bg-green-50 border border-green-200 text-[#2E7D32] font-bold text-[9px] rounded">LOCAL SEED</span>
+                  <span className="px-2 py-0.5 bg-green-50 border border-green-200 text-[#2E7D32] font-bold text-[9px] rounded">{t('settings.local_seed')}</span>
                 </div>
               </div>
             </div>
@@ -441,7 +443,7 @@ export default function App() {
                 onClick={() => setShowSettings(false)}
                 className="px-4 py-2 bg-[#1E4E8C] hover:bg-[#1E4E8C]/80 text-white rounded font-bold text-xs uppercase transition-colors cursor-pointer"
               >
-                Apply Changes
+                {t('settings.apply')}
               </button>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Plus, FileText, Settings, Shield, MessageSquare, Terminal } from 'lucide-react';
 import type { Session } from '../types';
 
@@ -12,6 +13,7 @@ interface SidebarProps {
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
+
   history,
   currentSessionId,
   onSelectSession,
@@ -19,6 +21,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   onExportPdf,
   onOpenSettings
 }) => {
+  const { t } = useTranslation();
   return (
     <aside className="w-80 h-screen bg-[#0B1F3A] border-r border-[#D9E1E8]/20 flex flex-col justify-between shrink-0 select-none">
       {/* Upper Area */}
@@ -29,8 +32,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
             <Shield className="w-5 h-5 text-[#C79A2B]" />
           </div>
           <div>
-            <h1 className="font-bold text-white tracking-wide text-xs">KAVERI ASSISTANT</h1>
-            <p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">Karnataka Police Intel</p>
+            <h1 className="font-bold text-white tracking-wide text-xs">{t('sidebar.title')}</h1>
+            <p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">{t('sidebar.subtitle')}</p>
           </div>
         </div>
 
@@ -41,7 +44,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             className="w-full h-11 rounded border border-[#C79A2B]/40 bg-[#1E4E8C] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#1E4E8C]/85 transition-colors cursor-pointer"
           >
             <Plus className="w-4 h-4 text-[#C79A2B]" />
-            New Investigation
+            {t('sidebar.new_chat')}
           </button>
         </div>
 
@@ -49,11 +52,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
         <div className="flex-1 overflow-y-auto px-3 pb-4">
           <div className="text-[10px] uppercase tracking-wider text-slate-400 font-bold px-3 mb-2 flex items-center gap-1.5">
             <MessageSquare className="w-3.5 h-3.5 text-slate-400" />
-            Recent Investigations
+            {t('sidebar.recent_chats')}
           </div>
           {history.length === 0 ? (
             <div className="text-xs text-slate-500 text-center italic mt-6 px-4">
-              No previous investigations logged.
+              {t('sidebar.no_history')}
             </div>
           ) : (
             <div className="space-y-1">
@@ -87,7 +90,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           className="w-full py-2.5 rounded bg-[#C79A2B] hover:bg-[#A37B1B] text-[#0B1F3A] font-bold text-[11px] uppercase tracking-wider transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-1.5"
         >
           <FileText className="w-4 h-4" />
-          Export Report
+          {t('sidebar.export')}
         </button>
 
         <button
@@ -95,13 +98,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
           className="w-full h-10 rounded text-slate-300 hover:text-white text-xs flex items-center justify-center gap-2 hover:bg-[#1E4E8C]/20 transition-colors cursor-pointer"
         >
           <Settings className="w-4 h-4 text-slate-400" />
-          Settings
+          {t('sidebar.settings')}
         </button>
         
         {/* User Role Badge */}
         <div className="flex items-center gap-2 px-3 py-1.5 rounded bg-[#071526]/50 border border-[#D9E1E8]/10 mt-1">
           <div className="w-2 h-2 rounded-full bg-[#2E7D32] animate-pulse"></div>
-          <span className="text-[9px] font-bold text-slate-400 tracking-wider">CONSOLE CONNECTED</span>
+          <span className="text-[9px] font-bold text-slate-400 tracking-wider">{t('sidebar.connected')}</span>
         </div>
       </div>
     </aside>
